@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import { Searchbar } from './Searchbar/Searchbar';
 
 class App extends Component{
   appStyles = {
@@ -25,7 +26,7 @@ class App extends Component{
       <div
         style={this.appStyles}
       >
-        React homework template
+        <Searchbar/>
       </div>
     );
   }
