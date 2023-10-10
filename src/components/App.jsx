@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Searchbar from './Searchbar/Searchbar';
+import { Loader } from './Loader/Loader';
 
 class App extends Component{
   appStyles = {
@@ -22,11 +23,15 @@ class App extends Component{
   };
 
   render() {
+    const { images, isLoading, isLoadMore, isModalShow, error } = this.state;
+
     return (
       <div
         style={this.appStyles}
       >
         <Searchbar/>
+        {error != null && <p>{error}</p>}
+        {isLoading && <Loader />}
       </div>
     );
   }
